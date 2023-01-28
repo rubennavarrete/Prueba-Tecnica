@@ -1,0 +1,90 @@
+.information{
+  width: 30rem;
+  height: 28rem;
+  background-color: #AAAAAA;
+  margin-left: 5rem;
+  opacity: .8;
+  border-radius: 20px;
+}
+
+.containerTop{
+  width: 100%;
+  height: 3rem;
+  display: flex;
+align-items: center;
+  /* background-color: blue; */
+}
+
+.txtTop{
+  color: #FFF;
+  font-family: 'Poppins', sans-serif;
+  margin-left: 1rem;
+  font-size: 20px;
+}
+
+.containerMid{
+  width: 100%;
+  height: 22rem;
+  background-color: #c6c6c6;
+}
+
+.liTxt{
+  list-style: none;
+  font-family: 'Poppins', sans-serif;
+  margin-left: 0.5rem;
+}
+
+.containerBottom{
+  width: 100%;
+  height: 3rem;
+  /* background-color: red; */
+}
+
+.btnClose{
+  height: 2rem;
+  border-radius: 5px;
+  margin-left: 25rem;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  border: 0;
+}
+
+.btnClose:hover{
+  background-color: #343434;
+  color: #FFF;
+}
+
+
+.cuadro{
+  width: 5rem;
+  height: 5rem;
+  background-color: #FFF;
+  border-radius: 10px;
+  margin-left: 12rem;
+}
+
+.cuadroEC{
+  width: 5rem;
+  height: 5rem;
+  background-color: #FFF;
+  border-radius: 10px;
+  margin-left: 12rem;
+  display: flex;
+}
+
+.headEvento{
+  width: 100%;
+  height: 1rem;
+  background-color: #f4eb34;
+  border-radius: 2px;
+
+}
+
+.headCita{
+  width: 100%;
+  height: 1rem;
+  background-color: #79c8db;
+  border-radius: 2px;
+}
