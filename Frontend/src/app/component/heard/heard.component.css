@@ -13,7 +13,7 @@
 }
 
 .containerIMG{
-  background-color: #FFF;
+  /* background-color: #FFF; */
   /* border-radius: 30px; */
   width: 27px;
   height: 27px;
@@ -27,6 +27,7 @@
 .imgCalendar{
   width: 32px;
   height: 32px;
+  color: #fff;
 }
 
 .txtTitle{
