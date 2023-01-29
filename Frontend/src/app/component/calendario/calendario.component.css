@@ -1,0 +1,10 @@
+.padre{
+    height: 100vh;
+}
+
+.padre-padre{
+    display: grid;
+    grid-template-columns: repeat(7, 3fr);
+    border: 1px solid;
+    text-align: center;
+}
