@@ -1,0 +1,45 @@
+.padre{
+    height: 100vh;
+}
+
+h2{
+    border: 1px solid;
+
+}
+
+.padre-padre{
+    display: grid;
+    grid-template-columns: repeat(7, 3fr);
+    border: 1px solid;
+    text-align: center;
+}
+
+.contenedor-dias{
+    display: grid;
+    grid-template-columns: repeat(7, 3fr);
+    border: 1px solid;
+
+}
+
+.dias{
+    border: 1px solid;
+   
+}
+
+.diasboton{
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    /* padding-bottom: 10px; */
+    padding-top: 50px;
+    border: none;
+    
+}
+
+.evento{
+    width: 100%;
+    background-color: cornflowerblue;
+    color: white;
+    border: none;
+    margin: 1px;
+}

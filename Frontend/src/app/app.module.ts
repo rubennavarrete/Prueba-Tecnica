@@ -9,20 +9,24 @@ import { FooterComponent } from './component/footer/footer.component';
 import { LayoutSimpleComponent } from './layout/layout-simple/layout-simple.component';
 import { MainComponent } from './component/main/main.component';
 import { InformationComponent } from './component/information/information.component';
+import {  HttpClientModule } from '@angular/common/http';
+import { CalendarioComponent } from './component/calendario/calendario.component';
+import { PartesuperiorComponent } from './component/partesuperior/partesuperior.component';
+import { ButtonComponent } from './component/button/button.component';
+import { LayoutModule } from './layout/layout.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeardComponent,
-    BodyComponent,
-    FooterComponent,
-    LayoutSimpleComponent,
-    MainComponent,
-    InformationComponent
+    // AppComponent,
+    // LayoutSimpleComponent,
+    // MainComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
