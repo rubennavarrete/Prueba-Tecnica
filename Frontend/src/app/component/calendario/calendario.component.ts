@@ -1,6 +1,7 @@
 import { getLocaleDayNames } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ComunicacionService } from 'src/app/core/service/comunicacion.service';
+import { calendarioModel, dataCalendario } from 'src/app/models/calendario';
 
 @Component({
   selector: 'app-calendario',
@@ -9,7 +10,9 @@ import { ComunicacionService } from 'src/app/core/service/comunicacion.service';
 })
 export class CalendarioComponent implements OnInit {
   prueba = 28
-  datosEventos: any
+  
+
+
   fechaactual = new Date();
   diasmes : number[] = []
  mes = this.fechaactual.getMonth()
@@ -28,9 +31,9 @@ export class CalendarioComponent implements OnInit {
   ngOnInit(): void {
     // console.log( this.dianame);
     this.srvComunicacion.getEntradas().subscribe({ 
-      next: (data: any ) => {
-        this.datosEventos = data
-        console.log(this.datosEventos );
+      next: (data: calendarioModel ) => {
+        this.srvComunicacion.datosEventos = data.body
+        console.log(this.srvComunicacion.datosEventos);
       },
       error:(err) => {
         console.error(err);

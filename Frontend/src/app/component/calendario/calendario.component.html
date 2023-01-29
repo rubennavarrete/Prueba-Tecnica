@@ -13,9 +13,11 @@
     <div class="contenedor-dias">
         <div class="dias" *ngFor="let dias of diasmes">
             <button class="diasboton">
-                <div class="contenido" *ngFor="let item of datosEventos">
-                    <div *ngIf="item.dia == dias">
-                        {{item.titulo}}
+                <!-- index para recorrer el vector de objetos  -->
+                <div class="contenido" *ngFor="let item of srvComunicacion.datosEventos; let i = index">
+                    <div *ngIf="srvComunicacion.datosEventos[i].dia == dias">
+                        <button class="evento">{{item.titulo}}</button>
+                        
                     </div>
                     
                    

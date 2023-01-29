@@ -30,8 +30,16 @@ h2{
     width: 100%;
     height: 100%;
     text-align: left;
-    padding-bottom: 40px;
-    padding-top: 10px;
+    /* padding-bottom: 10px; */
+    padding-top: 50px;
     border: none;
     
+}
+
+.evento{
+    width: 100%;
+    background-color: cornflowerblue;
+    color: white;
+    border: none;
+    margin: 1px;
 }
