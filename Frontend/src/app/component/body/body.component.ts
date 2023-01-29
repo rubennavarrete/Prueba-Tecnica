@@ -10,14 +10,7 @@ export class BodyComponent implements OnInit {
   constructor(public srvComunicacion: ComunicacionService) { }
 
   ngOnInit(): void {
-    this.srvComunicacion.getEntradas().subscribe({ 
-      next: (data: any ) => {
-        console.log(data);
-      },
-      error:(err) => {
-        console.error(err);
-      }
-    })
+    
   }
 
 }

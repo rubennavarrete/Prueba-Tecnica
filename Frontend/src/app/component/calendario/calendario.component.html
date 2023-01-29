@@ -1,12 +1,32 @@
 <!-- <p>calendario works!</p> -->
 <div class="padre">
     <div class="padre-padre">
+        <h2>Domingo</h2>
         <h2>Lunes</h2>
         <h2>Martes</h2>
         <h2>Miercoles</h2>
         <h2>Jueves</h2>
         <h2>Viernes</h2>
         <h2>Sabado</h2>
-        <h2>Domingo</h2>
+        
     </div>
+    <div class="contenedor-dias">
+        <div class="dias" *ngFor="let dias of diasmes">
+            <button class="diasboton">
+                <!-- index para recorrer el vector de objetos  -->
+                <div class="contenido" *ngFor="let item of srvComunicacion.datosEventos; let i = index">
+                    <div *ngIf="srvComunicacion.datosEventos[i].dia == dias">
+                        <button class="evento">{{item.titulo}}</button>
+                        
+                    </div>
+                    
+                   
+                </div>
+                
+                {{dias}}
+            </button>
+            
+        </div>
+    </div>
+
 </div>
