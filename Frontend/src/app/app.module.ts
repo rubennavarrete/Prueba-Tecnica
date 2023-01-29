@@ -9,6 +9,8 @@ import { FooterComponent } from './component/footer/footer.component';
 import { LayoutSimpleComponent } from './layout/layout-simple/layout-simple.component';
 import { MainComponent } from './component/main/main.component';
 import { InformationComponent } from './component/information/information.component';
+import { CalendarioComponent } from './component/calendario/calendario.component';
+import { PartesuperiorComponent } from './component/partesuperior/partesuperior.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { InformationComponent } from './component/information/information.compon
     FooterComponent,
     LayoutSimpleComponent,
     MainComponent,
-    InformationComponent
+    InformationComponent,
+    CalendarioComponent,
+    PartesuperiorComponent
   ],
   imports: [
     BrowserModule,
