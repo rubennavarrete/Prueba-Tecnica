@@ -1,3 +1,4 @@
+import { getLocaleDayNames } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,11 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalendarioComponent implements OnInit {
 
- 
 
-  constructor() { }
+  fechaactual = new Date();
+  
+ mes = this.fechaactual.getMonth()
+  dia = this.fechaactual.getDay()
+  anio = this.fechaactual.getFullYear()
+  dianame = this.fechaactual.toLocaleDateString('es-ES', {weekday: 'long'})
+  mesnumber = this.getDaysInMonth(this.anio, this.mes)
+  
 
-  ngOnInit(): void {
+  constructor() { 
+    
   }
 
+  ngOnInit(): void {
+    console.log( this.fechaactual.toDateString());
+  }
+
+  getDaysInMonth(year: number, month: number): number {
+    return new Date(year, month, 0).getDate();
+  }
+
+  
 }
