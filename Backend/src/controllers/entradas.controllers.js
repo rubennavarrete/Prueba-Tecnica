@@ -3,7 +3,12 @@ import { Entradas } from "../models/entradas.js";
 export const getEntradas = async (req, res) => {
   try {
     const entradas = await Entradas.findAll();
-    res.json(entradas);
+    //res.send(entradas);
+    res.json({
+      status: 200,
+      message: "OJK",
+      body: entradas,
+    });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
@@ -17,7 +22,8 @@ export const getEntrada = async (req, res) => {
         titulo,
       },
     });
-    if(!entrada) return res.status(404).json({message:"No existe la entrada"})
+    if (!entrada)
+      return res.status(404).json({ message: "No existe la entrada" });
     res.json(entrada);
   } catch (error) {
     return res.status(500).json({ message: error.message });
@@ -55,7 +61,8 @@ export const updateEntrada = async (req, res) => {
     entrada.lugar = lugar;
     entrada.hora = hora;
     await entrada.save();
-    res.json(entrada);
+    res.status(200).json({ body: entrada });
+    //res.json(entrada);
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }
