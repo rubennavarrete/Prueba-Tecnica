@@ -10,6 +10,8 @@ import { LayoutSimpleComponent } from './layout/layout-simple/layout-simple.comp
 import { MainComponent } from './component/main/main.component';
 import { InformationComponent } from './component/information/information.component';
 import {  HttpClientModule } from '@angular/common/http';
+import { CalendarioComponent } from './component/calendario/calendario.component';
+import { PartesuperiorComponent } from './component/partesuperior/partesuperior.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import {  HttpClientModule } from '@angular/common/http';
     FooterComponent,
     LayoutSimpleComponent,
     MainComponent,
-    InformationComponent
+    InformationComponent,
+    CalendarioComponent,
+    PartesuperiorComponent
   ],
   imports: [
     BrowserModule,
