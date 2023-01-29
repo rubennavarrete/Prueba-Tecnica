@@ -1,0 +1,64 @@
+.princPartSup{
+  width: 100%;
+  height: 52px;
+  background-color: #F0F0F0;
+  box-shadow: 2px 2px 5px #999;
+}
+
+.contData{
+  width: 42%;
+  height: 52px;
+  /* background-color: #fff; */
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+}
+
+.contInfo{
+  width: 30%;
+  height: 52px;
+  /* background-color: aqua; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1{
+  font-size: 26px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+  color: #000000;
+  font-weight: 600;
+}
+
+.contMov{
+  width: 20%;
+  height: 52px;
+  /* background-color: greenyellow; */
+  display: flex;
+  margin-left: 10px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+button{
+  font-size: 25px;
+  border-radius: 5px;
+  width: 42px;
+  height: 32px;
+  border: none;
+  background-color: #DCDCDC;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 5px #999;
+}
+
+button:hover{
+  background-color: #6A6E73;
+  color: #F0F0F0;
+}
+
+

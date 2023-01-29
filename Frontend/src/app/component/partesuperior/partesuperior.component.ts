@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PartesuperiorComponent implements OnInit {
 
+  mesName: string = 'January'
+  anio: number = 2023
+
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.anio, this.mesName)
   }
 
 }
