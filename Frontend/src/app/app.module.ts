@@ -12,23 +12,21 @@ import { InformationComponent } from './component/information/information.compon
 import {  HttpClientModule } from '@angular/common/http';
 import { CalendarioComponent } from './component/calendario/calendario.component';
 import { PartesuperiorComponent } from './component/partesuperior/partesuperior.component';
+import { ButtonComponent } from './component/button/button.component';
+import { LayoutModule } from './layout/layout.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeardComponent,
-    BodyComponent,
-    FooterComponent,
-    LayoutSimpleComponent,
-    MainComponent,
-    InformationComponent,
-    CalendarioComponent,
-    PartesuperiorComponent
+    // AppComponent,
+    // LayoutSimpleComponent,
+    // MainComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
