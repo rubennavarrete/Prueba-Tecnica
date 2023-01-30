@@ -14,6 +14,8 @@ import { CalendarioComponent } from './component/calendario/calendario.component
 import { PartesuperiorComponent } from './component/partesuperior/partesuperior.component';
 import { ButtonComponent } from './component/button/button.component';
 import { LayoutModule } from './layout/layout.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+// import { RecargaDirective } from './directives/recarga.directive'
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { LayoutModule } from './layout/layout.module';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    LayoutModule
+    LayoutModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

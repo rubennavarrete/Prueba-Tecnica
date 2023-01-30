@@ -1,0 +1,9 @@
+.padre{
+    border: 1px solid;
+    
+}
+
+.padre-padre{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

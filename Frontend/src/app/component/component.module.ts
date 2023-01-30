@@ -8,13 +8,17 @@ import { ModalComponent } from './modal/modal.component';
 import { CalendarioComponent } from './calendario/calendario.component';
 import { PartesuperiorComponent } from './partesuperior/partesuperior.component';
 import { ButtonComponent } from './button/button.component';
+import { CrearEventoComponent } from './crear-evento/crear-evento.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
 
 
 @NgModule({
-  declarations: [BodyComponent, FooterComponent, HeardComponent, InformationComponent, ModalComponent, CalendarioComponent, PartesuperiorComponent, ButtonComponent],
+  declarations: [BodyComponent, FooterComponent, HeardComponent, InformationComponent, ModalComponent, CalendarioComponent, PartesuperiorComponent, ButtonComponent, CrearEventoComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports:[BodyComponent, FooterComponent, HeardComponent, InformationComponent, ModalComponent, CalendarioComponent, PartesuperiorComponent, ButtonComponent]
 })

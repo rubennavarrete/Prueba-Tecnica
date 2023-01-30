@@ -17,6 +17,7 @@ export class CalendarioComponent implements OnInit {
   diasmes : number[] = []
  mes = this.fechaactual.getMonth()
   dia = this.fechaactual.getDay()
+  
   anio = this.fechaactual.getFullYear()
   dianame = this.fechaactual.toLocaleDateString('es-ES', {weekday: 'long'})
   mesnumber = this.getDaysInMonth(this.anio, this.mes)

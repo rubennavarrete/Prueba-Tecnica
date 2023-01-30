@@ -1,0 +1,33 @@
+<p>crear-evento works!</p>
+<div class="padre">
+    <form [formGroup]="myForm" (ngSubmit)="crearEvento()">
+        <h2>Crear Evento</h2>
+        <div class="padre-padre">
+            <div class="titulo-cita">
+                <label>
+                    <p>Titulo de la cita:</p>
+                    <input type="text" formControlName="titulo">
+                </label>
+            </div>
+            <div class="descrip-cita">
+                <label>
+                    <p>Descripción de la cita:</p>
+                    <input type="text" formControlName="descripcion">
+                </label>
+            </div>
+            <div class="lugar-cita">
+                <label >
+                    <p>Lugar de la cita:</p>
+                    <input type="text" formControlName="lugar">
+                </label>
+            </div>
+            <div class="hora-cita">
+                <label >
+                    <p>Hora de la cita:</p>
+                    <input type="time" formControlName="hora">
+                </label>
+            </div>
+        </div>
+        <button type="submit" [disabled]="!myForm.valid">Guardar</button>
+    </form>
+</div>
