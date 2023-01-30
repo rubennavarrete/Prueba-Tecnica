@@ -12,11 +12,11 @@
     </div>
     <div class="contenedor-dias">
         <div class="dias" *ngFor="let dias of diasmes">
-            <button class="diasboton">
-                <!-- index para recorrer el vector de objetos  -->
+            <button class="diasboton" id="mandar" (click)="mandarDia( dias )">
+                <!-- index para recorrer el vector de objetos let i = index -->
                 <div class="contenido" *ngFor="let item of srvComunicacion.datosEventos; let i = index">
-                    <div *ngIf="srvComunicacion.datosEventos[i].dia == dias">
-                        <button class="evento">{{item.titulo}}</button>
+                    <div class="contenedor-botones" *ngIf="srvComunicacion.datosEventos[i].dia == dias">
+                        <button class="evento" >{{item.titulo}}</button>
                         
                     </div>
                     
@@ -24,6 +24,7 @@
                 </div>
                 
                 {{dias}}
+                
             </button>
             
         </div>
