@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ComunicacionService } from 'src/app/core/service/comunicacion.service';
 import { calendarioModel, dataCalendario } from 'src/app/models/calendario';
 
+
 @Component({
   selector: 'app-calendario',
   templateUrl: './calendario.component.html',
@@ -46,5 +47,8 @@ export class CalendarioComponent implements OnInit {
     return new Date(year, month, 0).getDate();
   }
 
+  mostrarFormulario(){
+    
+  }
   
 }

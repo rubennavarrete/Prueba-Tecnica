@@ -1,0 +1,16 @@
+.calendario{
+    width: 70%;
+    float: left;
+    height: 100%;
+}
+.lateral{
+    width: 30%;
+    float: right;
+    
+}
+
+.padre{
+    height: 85%;
+    overflow: hidden;
+    
+}

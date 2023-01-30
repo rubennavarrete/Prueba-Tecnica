@@ -59,11 +59,18 @@ export class CrearEventoComponent implements OnInit {
       next: (data: calendarioModel ) => {
         this.srvComunicacion.datosEventos = data.body
         console.log(this.srvComunicacion.datosEventos);
+        this.myForm.reset();
       },
       error:(err) => {
         console.error(err);
       }
     })
+
   }
+
+  mostarDatos(){
+    this.myForm.value.titulo = this.srvComunicacion.datosEventos[8]
+  }
+  
 
 }

@@ -1,4 +1,4 @@
-<p>crear-evento works!</p>
+
 <div class="padre">
     <form [formGroup]="myForm" (ngSubmit)="crearEvento()">
         <h2>Crear Evento</h2>
@@ -29,5 +29,6 @@
             </div>
         </div>
         <button type="submit" [disabled]="!myForm.valid">Guardar</button>
+        <button type="reset" >Limpiar</button>
     </form>
 </div>
