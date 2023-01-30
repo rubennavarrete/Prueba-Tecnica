@@ -24,45 +24,37 @@ export class CrearEventoComponent implements OnInit, OnDestroy {
 
   constructor(public fb: FormBuilder,
     public srvComunicacion: ComunicacionService,
-    public srvSwitch: SwtichService) {
-
-    this.myForm = this.fb.group({
-      titulo: ['', [Validators.required]],
-      descripcion: [''],
-      dia: [0],
-      mes: [0],
-      anio: [0],
-      lugar: [''],
-      hora: [null, [Validators.required]]
-    })
-
+    public srvSwitch: SwtichService) {   
 
   }
 
 
   ngOnInit(): void {
-    // console.log('dia ->', this.srvSwitch.diaVolador);
-    // console.log(this.srvSwitch.atrapandoDia$);
 
-    
-
-
-
-  }
-
-
-
-  crearEvento() {
     this.srvSwitch.atrapandoDia$.pipe(takeUntil(this.distroy$)).subscribe({
 
       next: (resp: number) => {
-        this.myForm.value.dia = resp;
+ 
+        this.myForm = this.fb.group({
+          titulo: ['', [Validators.required]],
+          descripcion: [''],
+          dia: [resp],
+          mes: [0],
+          anio: [0],
+          lugar: [''],
+          hora: [null, [Validators.required]]
+        })
         console.log(resp);
       },
       error: (r) => {
         console.log(r);
       }
     })
+  }
+
+
+
+  crearEvento() {
 
 
     // let dia = this.fechaActual.getDate()
