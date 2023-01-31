@@ -16,12 +16,24 @@ export const Entradas = sequelize.define("entradas", {
   },
   dia: {
     type: DataTypes.INTEGER,
+    validate: {
+      min: 1,
+      max: 31
+    }
   },
   mes: {
     type: DataTypes.INTEGER,
+    validate:{
+      min:1,
+      max: 12
+    }
   },
   anio: {
     type: DataTypes.INTEGER,
+    validate:{
+      min:2000,
+      max: 5000
+    }
   },
   lugar: {
     type: DataTypes.STRING,

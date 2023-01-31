@@ -3,12 +3,10 @@ import { Entradas } from "../models/entradas.js";
 export const getEntradas = async (req, res) => {
   try {
     const entradas = await Entradas.findAll();
-    //const json =Object.assign({},entradas)
-    //res.send(entradas);
     res.json({
       status: 200,
       message: "OK",
-      body:entradas
+      body: entradas,
     });
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -34,17 +32,40 @@ export const getEntrada = async (req, res) => {
 export const createEntrada = async (req, res) => {
   const { titulo, descripcion, dia, mes, anio, lugar, hora } = req.body;
   try {
-    const newEntrada = await Entradas.create({
-      titulo,
-      descripcion,
-      dia,
-      mes,
-      anio,
-      lugar,
-      hora,
-    });
-    console.log(req.body);  //Recepeción de datos
-    res.send(newEntrada);
+    if (
+      titulo == null ||
+      titulo == "" ||
+      titulo == " " ||
+      descripcion == null ||
+      descripcion == "" ||
+      descripcion == " " ||
+      dia == null ||
+      mes == null ||
+      anio == null ||
+      lugar == null ||
+      lugar == "" ||
+      lugar == " " ||
+      hora == null
+    ) {
+ 
+      console.log("Se requiere llenar todos los campos");
+      res.json({
+        status: 500,
+        message: "Se requiere llenar todos los campos",
+      });
+    } else {
+      const newEntrada = await Entradas.create({
+        titulo,
+        descripcion,
+        dia,
+        mes,
+        anio,
+        lugar,
+        hora,
+      });
+      console.log(req.body); //Recepeción de datos
+      res.send(newEntrada);
+    }
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
@@ -84,23 +105,22 @@ export const deleteEntrada = async (req, res) => {
   }
 };
 
-
 export const getEntradaTres = async (req, res) => {
   try {
-    const entradas = await Entradas.findAll(
-        {
-            limit:4,
-            order:[['dia', 'ASC']]
-        }
-    );
+    const entradas = await Entradas.findAll({
+      limit: 4,
+      order: [["dia", "ASC"]],
+    });
     //const json =Object.assign({},entradas)
     //res.send(entradas);
     res.json({
       status: 200,
       message: "OK",
-      body:entradas
+      body: entradas,
     });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
 };
+
+      

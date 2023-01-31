@@ -8,5 +8,7 @@ export const sequelize = new Sequelize(
     host: "143.110.144.231",
     dialect: "postgres",
     logging:false
+    
   }
+  
 );
