@@ -1,3 +1,4 @@
+import { sequelize } from "../database/database.js";
 import { Entradas } from "../models/entradas.js";
 export const getEntradas = async (req, res) => {
   try {
