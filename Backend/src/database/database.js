@@ -1,11 +1,12 @@
 import { Sequelize } from "sequelize";
 
 export const sequelize = new Sequelize(
-  "bd_planificador",
+  "db_practicas",
   "postgres",
-  "cmingruimr-8501",
+  "pr@ct1c@5",
   {
-    host: "localhost",
+    host: "143.110.144.231",
     dialect: "postgres",
+    logging:false
   }
 );

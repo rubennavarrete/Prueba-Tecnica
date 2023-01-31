@@ -1,13 +1,13 @@
 import { Entradas } from "../models/entradas.js";
-
 export const getEntradas = async (req, res) => {
   try {
     const entradas = await Entradas.findAll();
+    //const json =Object.assign({},entradas)
     //res.send(entradas);
     res.json({
       status: 200,
-      message: "OJK",
-      body: entradas,
+      message: "OK",
+      body:entradas
     });
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -29,6 +29,7 @@ export const getEntrada = async (req, res) => {
     return res.status(500).json({ message: error.message });
   }
 };
+
 export const createEntrada = async (req, res) => {
   const { titulo, descripcion, dia, mes, anio, lugar, hora } = req.body;
   try {
@@ -41,7 +42,7 @@ export const createEntrada = async (req, res) => {
       lugar,
       hora,
     });
-
+    console.log(req.body);  //Recepeción de datos
     res.send(newEntrada);
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -68,16 +69,37 @@ export const updateEntrada = async (req, res) => {
   }
 };
 export const deleteEntrada = async (req, res) => {
-  const { id } = req.params;
+  const { dia } = req.params;
   try {
     await Entradas.destroy({
       where: {
-        id,
+        dia,
       },
     });
 
     res.sendStatus(204);
   } catch (error) {
     return res.status(500).json({ message: error.message });
+  }
+};
+
+
+export const getEntradaTres = async (req, res) => {
+  try {
+    const entradas = await Entradas.findAll(
+        {
+            limit:4,
+            order:[['dia', 'ASC']]
+        }
+    );
+    //const json =Object.assign({},entradas)
+    //res.send(entradas);
+    res.json({
+      status: 200,
+      message: "OK",
+      body:entradas
+    });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
   }
 };
