@@ -1,8 +1,9 @@
+import { sequelize } from "../database/database.js";
 import { Entradas } from "../models/entradas.js";
 
 export const getEntradas = async (req, res) => {
   try {
-    const entradas = await Entradas.findAll();
+    const entradas = await Entradas.findAll();  //Obtiene todos las datos de la db
     //res.send(entradas);
     res.json({
       status: 200,
@@ -81,3 +82,17 @@ export const deleteEntrada = async (req, res) => {
     return res.status(500).json({ message: error.message });
   }
 };
+
+export const getTresEntradas = async (req, res) => {
+  try {
+    const entradas = await Entradas.findAll();  //Obtiene todos las datos de la db
+    //res.send(entradas);
+    res.json({
+      status: 200,
+      message: "OJK",
+      body: entradas,
+    });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};cd
