@@ -1,0 +1,15 @@
+.padre{
+    border: 1px solid;
+    /* width: 70%; */
+    /* padding-top: 150px;
+    padding-bottom: 150px; */
+    height: 100%;
+}
+
+.padre-padre{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+
